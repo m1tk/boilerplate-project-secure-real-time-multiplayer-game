@@ -22,6 +22,7 @@ app.use(helmet({
   ieNoOpen: true,
   xssFilter: true
 }));
+app.use(helmet.noSniff());
 app.use((req, res, next) => {
   res.setHeader('X-Powered-By', 'PHP 7.4.3');
   next();
